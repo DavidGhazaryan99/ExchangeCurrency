@@ -10,6 +10,9 @@ file in your sql database and I will post a postman collection here as well.
 What can this program do?
 
 1)Add, Delete and Update Transaction
+
 2)Authorization with ApiKey
+
 3)Add and Delete Exchange Rates
+
 4)Logging Important Information in Text file (Nlog have ability to write logs in Cloud with minimal Configuration)
