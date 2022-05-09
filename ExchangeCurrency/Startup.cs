@@ -1,14 +1,15 @@
 ﻿using ExchangeCurrency.AutoMappes;
 using ExchangeCurrency.BusinessLogic;
 using ExchangeCurrency.Data.Models;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+using ExchangeCurrency.Logger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Identity.Web;
+using NLog;
+using System.IO;
 
 namespace ExchangeCurrency
 {
@@ -16,14 +17,16 @@ namespace ExchangeCurrency
     {
         public Startup(IConfiguration configuration)
         {
+            LogManager.LoadConfiguration(string.Concat(Directory.GetCurrentDirectory(), "/Logger/nlog.config"));
             Configuration = configuration;
         }
-
+        
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<ILog, LogNLog>();
             services.AddAutoMapper(typeof(AppMappingProfile));
             services.AddControllers();
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));

@@ -605,6 +605,15 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "NLog/4.7.15": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NLog.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {}
+        }
+      },
       "Swashbuckle.AspNetCore/5.6.3": {
         "type": "package",
         "dependencies": {
@@ -1879,6 +1888,39 @@
         "packageIcon.png"
       ]
     },
+    "NLog/4.7.15": {
+      "sha512": "vXMmsK17hXnMsKd8BdCrJzvb8JMT0+cPgBGRfnqcXIb6y8b6RMIZexO4hMhQgifcTHgU7dbubvCR5A5wX6Ne+A==",
+      "type": "package",
+      "path": "nlog/4.7.15",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid44/NLog.dll",
+        "lib/monoandroid44/NLog.xml",
+        "lib/net35/NLog.dll",
+        "lib/net35/NLog.xml",
+        "lib/net40-client/NLog.dll",
+        "lib/net40-client/NLog.xml",
+        "lib/net45/NLog.dll",
+        "lib/net45/NLog.xml",
+        "lib/netstandard1.3/NLog.dll",
+        "lib/netstandard1.3/NLog.xml",
+        "lib/netstandard1.5/NLog.dll",
+        "lib/netstandard1.5/NLog.xml",
+        "lib/netstandard2.0/NLog.dll",
+        "lib/netstandard2.0/NLog.xml",
+        "lib/sl4/NLog.dll",
+        "lib/sl4/NLog.xml",
+        "lib/sl5/NLog.dll",
+        "lib/sl5/NLog.xml",
+        "lib/wp8/NLog.dll",
+        "lib/wp8/NLog.xml",
+        "lib/xamarinios10/NLog.dll",
+        "lib/xamarinios10/NLog.xml",
+        "nlog.4.7.15.nupkg.sha512",
+        "nlog.nuspec"
+      ]
+    },
     "Swashbuckle.AspNetCore/5.6.3": {
       "sha512": "UkL9GU0mfaA+7RwYjEaBFvAzL8qNQhNqAeV5uaWUu/Z+fVgvK9FHkGCpTXBqSQeIHuZaIElzxnLDdIqGzuCnVg==",
       "type": "package",
@@ -2686,6 +2728,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.16",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.16",
       "Microsoft.Identity.Web >= 1.1.0",
+      "NLog >= 4.7.15",
       "Newtonsoft.Json >= 13.0.1",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
@@ -2696,11 +2739,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Arus\\source\\repos\\ExchangeCurrency\\ExchangeCurrency\\ExchangeCurrency.csproj",
+      "projectUniqueName": "C:\\Users\\Arus\\Documents\\GitHub\\SocialNetwork\\ExchangeCurrency\\ExchangeCurrency\\ExchangeCurrency.csproj",
       "projectName": "ExchangeCurrency",
-      "projectPath": "C:\\Users\\Arus\\source\\repos\\ExchangeCurrency\\ExchangeCurrency\\ExchangeCurrency.csproj",
+      "projectPath": "C:\\Users\\Arus\\Documents\\GitHub\\SocialNetwork\\ExchangeCurrency\\ExchangeCurrency\\ExchangeCurrency.csproj",
       "packagesPath": "C:\\Users\\Arus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Arus\\source\\repos\\ExchangeCurrency\\ExchangeCurrency\\obj\\",
+      "outputPath": "C:\\Users\\Arus\\Documents\\GitHub\\SocialNetwork\\ExchangeCurrency\\ExchangeCurrency\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Arus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2762,6 +2805,10 @@
           "Microsoft.Identity.Web": {
             "target": "Package",
             "version": "[1.1.0, )"
+          },
+          "NLog": {
+            "target": "Package",
+            "version": "[4.7.15, )"
           },
           "Newtonsoft.Json": {
             "target": "Package",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Arus\\source\\repos\\ExchangeCurrency\\ExchangeCurrency\\ExchangeCurrency.csproj": {}
+    "C:\\Users\\Arus\\Documents\\GitHub\\SocialNetwork\\ExchangeCurrency\\ExchangeCurrency\\ExchangeCurrency.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Arus\\source\\repos\\ExchangeCurrency\\ExchangeCurrency\\ExchangeCurrency.csproj": {
+    "C:\\Users\\Arus\\Documents\\GitHub\\SocialNetwork\\ExchangeCurrency\\ExchangeCurrency\\ExchangeCurrency.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Arus\\source\\repos\\ExchangeCurrency\\ExchangeCurrency\\ExchangeCurrency.csproj",
+        "projectUniqueName": "C:\\Users\\Arus\\Documents\\GitHub\\SocialNetwork\\ExchangeCurrency\\ExchangeCurrency\\ExchangeCurrency.csproj",
         "projectName": "ExchangeCurrency",
-        "projectPath": "C:\\Users\\Arus\\source\\repos\\ExchangeCurrency\\ExchangeCurrency\\ExchangeCurrency.csproj",
+        "projectPath": "C:\\Users\\Arus\\Documents\\GitHub\\SocialNetwork\\ExchangeCurrency\\ExchangeCurrency\\ExchangeCurrency.csproj",
         "packagesPath": "C:\\Users\\Arus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Arus\\source\\repos\\ExchangeCurrency\\ExchangeCurrency\\obj\\",
+        "outputPath": "C:\\Users\\Arus\\Documents\\GitHub\\SocialNetwork\\ExchangeCurrency\\ExchangeCurrency\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Arus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -73,6 +73,10 @@
             "Microsoft.Identity.Web": {
               "target": "Package",
               "version": "[1.1.0, )"
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[4.7.15, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

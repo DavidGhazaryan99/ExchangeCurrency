@@ -1,13 +1,10 @@
-﻿using AutoMapper;
-using ExchangeCurrency.BusinessLogic;
+﻿using ExchangeCurrency.BusinessLogic;
 using ExchangeCurrency.Controllers.Attributes;
 using ExchangeCurrency.Data.Models;
 using ExchangeCurrency.DtoModels;
+using ExchangeCurrency.Logger;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System.Collections.Generic;
-using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace ExchangeCurrency.Controllers
@@ -17,62 +14,97 @@ namespace ExchangeCurrency.Controllers
     [ApiController]
     public class TransactionsController : ControllerBase
     {
-        private readonly ILogger<TransactionsController> _logger;
         private readonly TransactionLogic _transactionLogic;
+        private ILog logger;
 
-        public TransactionsController(ILogger<TransactionsController> logger, TransactionLogic transactionLogic)
+        public TransactionsController(TransactionLogic transactionLogic, ILog logger)
         {
             _transactionLogic = transactionLogic;
-            _logger = logger;
+            this.logger = logger;
         }
 
         [HttpGet("list")]
-        public async Task<object> Get()
+        public async Task<ActionResult> Get()
         {
-            if (await _transactionLogic.GetTransactionList() != null)
-                return await _transactionLogic.GetTransactionList();
-            else
-                return NotFound("Can Not Find Requested Resource");
+            try
+            {
+                var transactionList = await _transactionLogic.GetTransactionList();
+                if (transactionList != null)
+                    return Ok(transactionList);
+                else
+                    return NotFound("Requested resource not found");
+            }
+            catch (System.Exception ex)
+            {
+                logger.Error("transaction list get failed", ex);
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
         }
 
         [HttpGet("{id}")]
-        public object GetTransaction(int id)
+        public async Task<ActionResult> GetTransaction(int id)
         {
-            if (_transactionLogic.GetTransactionById(id) != null)
-                return _transactionLogic.GetTransactionById(id);
-            else
-                return NotFound("Can Not Find Requested Resource");
+            try
+            {
+                var transaction = await _transactionLogic.GetTransactionById(id);
+                if (transaction != null)
+                    return Ok(transaction);
+                else
+                    return NotFound("Requested resource not found");
+            }
+            catch (System.Exception ex)
+            {
+                logger.Error("transaction get failed", ex);
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
         }
 
         [HttpPost("Create")]
-        public object Post([FromBody] TransactionDto transactionInformation)
+        public async Task<ActionResult> Post([FromBody] TransactionDto transactionInformation)
         {
-            string status = _transactionLogic.Create(transactionInformation);
-            if (status == "successful")
+            try
+            {
+                await _transactionLogic.Create(transactionInformation);
+                logger.Information("Trasaction Created");
                 return Ok("transaction created");
-            else
-                return NotFound(status);
-
+            }
+            catch (System.Exception ex)
+            {
+                logger.Error("transaction failed", ex);
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
         }
 
         [HttpPut("{id}")]
-        public object Put(Transaction transaction, int id)
+        public async Task<ActionResult> Put(TransactionDto transaction)
         {
-            string status = _transactionLogic.Update(transaction, id);
-            if (status == "successful")
+            try
+            {
+                await _transactionLogic.Update(transaction);
+                logger.Information("Trasaction Updated");
                 return Ok("transaction updated");
-            else
-                return NotFound(status);
+            }
+            catch (System.Exception ex)
+            {
+                logger.Error($"Could not update transaction with id {transaction.id} not updated", ex);
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
         }
 
         [HttpDelete("{id}")]
-        public object Delete(int id)
+        public async Task<ActionResult> Delete(int id)
         {
-            var status = _transactionLogic.Delete(id);
-            if (status == "successful")
-                return Ok("transaction deleted");
-            else
-                return NotFound(status);
+            try
+            {
+                await _transactionLogic.Delete(id);
+                logger.Information("Trasaction deleted");
+                return Ok($"Transaction with id {id} deleted");
+            }
+            catch (System.Exception ex)
+            {
+                logger.Error($"Could not delete transaction with id {id}", ex);
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
         }
     }
 }

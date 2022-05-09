@@ -1,0 +1,23 @@
+2022-05-09 16:14:40.7439 INFO Information is logged
+2022-05-09 16:14:40.7887 WARN Warning is logged
+2022-05-09 16:14:40.7887 DEBUG Debug log is logged
+2022-05-09 16:14:40.7887 ERROR transaction not created
+2022-05-09 17:33:00.5414 INFO Information is logged
+2022-05-09 17:33:00.6314 WARN Warning is logged
+2022-05-09 17:33:00.6314 DEBUG Debug log is logged
+2022-05-09 17:33:00.6314 ERROR transaction not created
+2022-05-09 17:33:15.5946 INFO Trasaction deleted
+2022-05-09 17:33:36.9142 INFO Trasaction deleted
+2022-05-09 17:33:44.4069 INFO Trasaction deleted
+2022-05-09 17:33:55.6959 INFO Trasaction deleted
+2022-05-09 17:34:00.1363 INFO Trasaction deleted
+2022-05-09 17:34:04.9436 INFO Information is logged
+2022-05-09 17:34:04.9436 WARN Warning is logged
+2022-05-09 17:34:04.9436 DEBUG Debug log is logged
+2022-05-09 17:34:04.9436 ERROR transaction not created
+2022-05-09 17:34:35.3184 INFO Trasaction Created
+2022-05-09 17:34:39.2056 INFO Information is logged
+2022-05-09 17:34:39.2086 WARN Warning is logged
+2022-05-09 17:34:39.2086 DEBUG Debug log is logged
+2022-05-09 17:34:39.2086 ERROR transaction not created
+2022-05-09 17:34:51.9924 ERROR Could not delete transaction with id 1003

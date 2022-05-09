@@ -1,6 +1,8 @@
 ﻿using ExchangeCurrency.BusinessLogic;
 using ExchangeCurrency.Controllers.Attributes;
 using ExchangeCurrency.DtoModels;
+using ExchangeCurrency.Logger;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -12,28 +14,45 @@ namespace ExchangeCurrency.Controllers
     public class ExchangeRatesDataController : ControllerBase
     {
         private readonly TransactionLogic _transactionLogic;
+        private ILog logger;
 
-        public ExchangeRatesDataController(TransactionLogic transactionLogic)
+        public ExchangeRatesDataController(TransactionLogic transactionLogic, ILog logger)
         {
             _transactionLogic = transactionLogic;
+            this.logger = logger;
         }
 
         [HttpGet("latest")]
-        public async Task<object> Get()
+        public async Task<ActionResult> Get()
         {
-            if (await _transactionLogic.GetLatestExchangeRate() != null)
-                return await _transactionLogic.GetLatestExchangeRate();
-            else
-                return NotFound("Can Not Find Requested Resource");
+            try
+            {
+                var latestRate = await _transactionLogic.GetLatestExchangeRate();
+                if (latestRate == null)
+                    return NotFound("rate does not exists");
+                else
+                    return Ok(latestRate);
+            }
+            catch (System.Exception ex)
+            {
+                logger.Error(ex.Message, ex);
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
         }
+
         [HttpPost]
-        public object PostExchangeRate(CurrencyExchangeRateDto rateDto)
+        public async Task<ActionResult> PostExchangeRate(CurrencyExchangeRateDto rateDto)
         {
-            string status = _transactionLogic.AddLatestExchangeRate(rateDto);
-            if (status == "successful")
+            try
+            {
+                await _transactionLogic.AddLatestExchangeRate(rateDto);
                 return Ok("transaction updated");
-            else
-                return NotFound(status);
+            }
+            catch (System.Exception ex)
+            {
+                logger.Error("transaction not Deleted", ex);
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
         }
     }
 }

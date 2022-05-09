@@ -1,0 +1,494 @@
+2022-05-09 16:14:30.5445 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2022-05-09 16:14:30.7046 Debug Found assembly location directory: 'C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\bin\Debug\net5.0' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2022-05-09 16:14:30.7233 Debug Auto loading based on NLog-Assembly found location: C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\bin\Debug\net5.0
+2022-05-09 16:14:30.7250 Debug Search for auto loading files in location: C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\bin\Debug\net5.0
+2022-05-09 16:14:30.7250 Debug Found assembly location directory: 'C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\bin\Debug\net5.0' (ExchangeCurrency, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)
+2022-05-09 16:14:30.7250 Debug Auto loading based on GetEntryAssembly-Assembly found location: C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\bin\Debug\net5.0
+2022-05-09 16:14:30.7250 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\bin\Debug\net5.0
+2022-05-09 16:14:30.7250 Debug Start auto loading, location: C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\bin\Debug\net5.0
+2022-05-09 16:14:30.7425 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2022-05-09 16:14:30.7425 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2022-05-09 16:14:30.7425 Debug Auto loading done
+2022-05-09 16:14:30.7425 Info Message Template Auto Format enabled
+2022-05-09 16:14:30.7425 Info Loading assembly: NLog.Extended
+2022-05-09 16:14:30.7425 Trace Try find 'NLog.Extended' in current domain
+2022-05-09 16:14:30.7425 Trace Haven't found' 'NLog.Extended' in current domain
+2022-05-09 16:14:30.7425 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Extended
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Extended, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'NLog.Extended, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(ObjectHandleOnStack assemblyName, ObjectHandleOnStack requestingAssembly, StackCrawlMarkHandle stackMark, Boolean throwOnFileNotFound, ObjectHandleOnStack assemblyLoadContext, ObjectHandleOnStack retAssembly)
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, RuntimeAssembly requestingAssembly, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Internal.AssemblyHelpers.LoadFromName(String assemblyName)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssembly(String assemblyName, String prefix)
+   --- End of inner exception stack trace ---
+2022-05-09 16:14:30.8395 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 16:14:30.8395 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-05-09 16:14:30.8576 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2022-05-09 16:14:30.8576 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2022-05-09 16:14:30.8576 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 16:14:30.8576 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-05-09 16:14:30.8576 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 16:14:30.8576 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-05-09 16:14:30.8663 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2022-05-09 16:14:30.8663 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2022-05-09 16:14:30.8663 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2022-05-09 16:14:30.8663 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-05-09 16:14:30.8663 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 16:14:30.8663 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2022-05-09 16:14:30.8663 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 16:14:30.8663 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-05-09 16:14:30.8663 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2022-05-09 16:14:30.8663 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\${shortdate}_log.txt'
+2022-05-09 16:14:30.8842 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 16:14:30.8842 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-05-09 16:14:30.8842 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2022-05-09 16:14:30.8842 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 16:14:30.8842 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-05-09 16:14:30.8842 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2022-05-09 16:14:30.8842 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2022-05-09 16:14:30.8842 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 16:14:30.8842 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-05-09 16:14:30.8842 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 16:14:30.8842 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-05-09 16:14:30.8842 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2022-05-09 16:14:30.8842 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2022-05-09 16:14:30.8842 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2022-05-09 16:14:30.8842 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-05-09 16:14:30.8842 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 16:14:30.8954 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-05-09 16:14:30.8954 Info Adding target FileTarget(Name=logfile)
+2022-05-09 16:14:30.8954 Debug Registered target logfile: NLog.Targets.FileTarget
+2022-05-09 16:14:30.8954 Trace ParseRulesElement
+2022-05-09 16:14:30.9275 Debug Watching path 'C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\Controllers\Logger' filter 'nlog.config' for changes.
+2022-05-09 16:14:30.9275 Debug --- NLog configuration dump ---
+2022-05-09 16:14:30.9275 Debug Targets:
+2022-05-09 16:14:30.9275 Debug File Target[logfile]
+2022-05-09 16:14:30.9275 Debug Rules:
+2022-05-09 16:14:30.9363 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2022-05-09 16:14:30.9363 Debug --- End of NLog configuration dump ---
+2022-05-09 16:14:30.9363 Trace FindReachableObject<System.Object>:
+2022-05-09 16:14:30.9363 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2022-05-09 16:14:30.9439 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2022-05-09 16:14:30.9439 Trace  Scanning FileTarget 'File Target[logfile]'
+2022-05-09 16:14:30.9439 Trace   Scanning Property FileName ''C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\${shortdate}_log.txt'' NLog.Layouts
+2022-05-09 16:14:30.9439 Trace   Scanning SimpleLayout ''C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\${shortdate}_log.txt''
+2022-05-09 16:14:30.9439 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2022-05-09 16:14:30.9439 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-05-09 16:14:30.9439 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-05-09 16:14:30.9439 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-05-09 16:14:30.9439 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2022-05-09 16:14:30.9439 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2022-05-09 16:14:30.9439 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2022-05-09 16:14:30.9439 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-05-09 16:14:30.9439 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-05-09 16:14:30.9439 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-05-09 16:14:30.9439 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2022-05-09 16:14:30.9439 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2022-05-09 16:14:30.9439 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2022-05-09 16:14:30.9439 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-05-09 16:14:30.9439 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-05-09 16:14:30.9439 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-05-09 16:14:30.9439 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2022-05-09 16:14:30.9439 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2022-05-09 16:14:30.9439 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2022-05-09 16:14:30.9439 Info Validating config: TargetNames=logfile, ConfigItems=14, FilePath=C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency/Controllers/Logger/nlog.config
+2022-05-09 16:14:30.9664 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2022-05-09 16:14:30.9749 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2022-05-09 16:14:30.9749 Trace Initializing Layout Renderer: ${message}
+2022-05-09 16:14:30.9749 Trace Initializing Layout Renderer: ${literal}
+2022-05-09 16:14:30.9749 Trace Initializing Layout Renderer: ${level}
+2022-05-09 16:14:30.9749 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2022-05-09 16:14:30.9749 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 16:14:30.9749 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2022-05-09 16:14:30.9749 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2022-05-09 16:14:30.9749 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-05-09 16:14:30.9979 Trace Initializing Layout Renderer: ${uppercase}
+2022-05-09 16:14:30.9979 Trace Initializing Layout Renderer: ${literal}
+2022-05-09 16:14:30.9979 Trace Initializing Layout Renderer: ${longdate}
+2022-05-09 16:14:30.9979 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2022-05-09 16:14:30.9979 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 16:14:30.9979 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2022-05-09 16:14:30.9979 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2022-05-09 16:14:30.9979 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-05-09 16:14:30.9979 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-05-09 16:14:30.9979 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-05-09 16:14:30.9979 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2022-05-09 16:14:30.9979 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2022-05-09 16:14:31.0114 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2022-05-09 16:14:31.0114 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-05-09 16:14:31.0114 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-05-09 16:14:31.0114 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-05-09 16:14:31.0114 Trace Initializing Layout Renderer: ${literal}
+2022-05-09 16:14:31.0114 Trace Initializing Layout Renderer: ${shortdate}
+2022-05-09 16:14:31.0114 Trace Initializing Layout Renderer: ${literal}
+2022-05-09 16:14:31.0114 Trace Initializing 'C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\${shortdate}_log.txt'
+2022-05-09 16:14:31.0114 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 16:14:31.0114 Trace Scanning SimpleLayout ''C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\${shortdate}_log.txt''
+2022-05-09 16:14:31.0114 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2022-05-09 16:14:31.0114 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-05-09 16:14:31.0114 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-05-09 16:14:31.0114 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-05-09 16:14:31.0114 Trace Initializing File Target[logfile]
+2022-05-09 16:14:31.0250 Trace FindReachableObject<NLog.Layouts.Layout>:
+2022-05-09 16:14:31.0250 Trace Scanning FileTarget 'File Target[logfile]'
+2022-05-09 16:14:31.0250 Trace  Scanning Property FileName ''C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\${shortdate}_log.txt'' NLog.Layouts
+2022-05-09 16:14:31.0250 Trace  Scanning SimpleLayout ''C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\${shortdate}_log.txt''
+2022-05-09 16:14:31.0250 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2022-05-09 16:14:31.0250 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2022-05-09 16:14:31.0250 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2022-05-09 16:14:31.0250 Trace File Target[logfile] has 2 layouts
+2022-05-09 16:14:31.0250 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2022-05-09 16:14:40.7350 Debug Targets for ExchangeCurrency.Controllers.Logger.LogNLog by level:
+2022-05-09 16:14:40.7350 Debug Trace =>
+2022-05-09 16:14:40.7350 Debug Debug => logfile
+2022-05-09 16:14:40.7350 Debug Info => logfile
+2022-05-09 16:14:40.7350 Debug Warn => logfile
+2022-05-09 16:14:40.7350 Debug Error => logfile
+2022-05-09 16:14:40.7350 Debug Fatal => logfile
+2022-05-09 16:14:40.7715 Debug FileTarget(Name=logfile): Preparing for new file 'C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt'
+2022-05-09 16:14:40.7715 Debug Creating file appender: C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt
+2022-05-09 16:14:40.7715 Trace Opening C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt with allowFileSharedWriting=False
+2022-05-09 16:14:40.7887 Trace Opening C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt with allowFileSharedWriting=False
+2022-05-09 16:14:40.7887 Trace Opening C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt with allowFileSharedWriting=False
+2022-05-09 16:14:40.7887 Trace Opening C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt with allowFileSharedWriting=False
+2022-05-09 17:32:32.3752 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2022-05-09 17:32:32.8666 Debug Found assembly location directory: 'C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\bin\Debug\net5.0' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2022-05-09 17:32:32.8666 Debug Auto loading based on NLog-Assembly found location: C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\bin\Debug\net5.0
+2022-05-09 17:32:32.8666 Debug Search for auto loading files in location: C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\bin\Debug\net5.0
+2022-05-09 17:32:32.8666 Debug Found assembly location directory: 'C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\bin\Debug\net5.0' (ExchangeCurrency, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)
+2022-05-09 17:32:32.8666 Debug Auto loading based on GetEntryAssembly-Assembly found location: C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\bin\Debug\net5.0
+2022-05-09 17:32:32.8666 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\bin\Debug\net5.0
+2022-05-09 17:32:32.8805 Debug Start auto loading, location: C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\bin\Debug\net5.0
+2022-05-09 17:32:32.8805 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2022-05-09 17:32:32.8805 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2022-05-09 17:32:32.8805 Debug Auto loading done
+2022-05-09 17:32:32.8805 Info Message Template Auto Format enabled
+2022-05-09 17:32:32.8805 Info Loading assembly: NLog.Extended
+2022-05-09 17:32:32.8965 Trace Try find 'NLog.Extended' in current domain
+2022-05-09 17:32:32.8965 Trace Haven't found' 'NLog.Extended' in current domain
+2022-05-09 17:32:32.8965 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Extended
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Extended, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'NLog.Extended, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(ObjectHandleOnStack assemblyName, ObjectHandleOnStack requestingAssembly, StackCrawlMarkHandle stackMark, Boolean throwOnFileNotFound, ObjectHandleOnStack assemblyLoadContext, ObjectHandleOnStack retAssembly)
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, RuntimeAssembly requestingAssembly, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Internal.AssemblyHelpers.LoadFromName(String assemblyName)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssembly(String assemblyName, String prefix)
+   --- End of inner exception stack trace ---
+2022-05-09 17:32:32.9671 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 17:32:32.9671 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-05-09 17:32:32.9772 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2022-05-09 17:32:32.9772 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2022-05-09 17:32:32.9772 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 17:32:32.9772 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-05-09 17:32:32.9772 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 17:32:32.9772 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-05-09 17:32:32.9772 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2022-05-09 17:32:32.9772 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2022-05-09 17:32:32.9772 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2022-05-09 17:32:32.9901 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-05-09 17:32:32.9901 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 17:32:32.9901 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2022-05-09 17:32:32.9901 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 17:32:32.9901 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-05-09 17:32:32.9901 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2022-05-09 17:32:32.9901 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\${shortdate}_log.txt'
+2022-05-09 17:32:32.9901 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 17:32:32.9901 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-05-09 17:32:32.9901 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2022-05-09 17:32:32.9901 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 17:32:33.0053 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-05-09 17:32:33.0053 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2022-05-09 17:32:33.0053 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2022-05-09 17:32:33.0053 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 17:32:33.0053 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-05-09 17:32:33.0053 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 17:32:33.0053 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-05-09 17:32:33.0053 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2022-05-09 17:32:33.0053 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2022-05-09 17:32:33.0053 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2022-05-09 17:32:33.0053 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-05-09 17:32:33.0053 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 17:32:33.0053 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-05-09 17:32:33.0053 Info Adding target FileTarget(Name=logfile)
+2022-05-09 17:32:33.0053 Debug Registered target logfile: NLog.Targets.FileTarget
+2022-05-09 17:32:33.0053 Trace ParseRulesElement
+2022-05-09 17:32:33.0375 Debug Watching path 'C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\Logger' filter 'nlog.config' for changes.
+2022-05-09 17:32:33.0375 Debug --- NLog configuration dump ---
+2022-05-09 17:32:33.0375 Debug Targets:
+2022-05-09 17:32:33.0375 Debug File Target[logfile]
+2022-05-09 17:32:33.0375 Debug Rules:
+2022-05-09 17:32:33.0375 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2022-05-09 17:32:33.0375 Debug --- End of NLog configuration dump ---
+2022-05-09 17:32:33.0542 Trace FindReachableObject<System.Object>:
+2022-05-09 17:32:33.0542 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2022-05-09 17:32:33.0542 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2022-05-09 17:32:33.0542 Trace  Scanning FileTarget 'File Target[logfile]'
+2022-05-09 17:32:33.0542 Trace   Scanning Property FileName ''C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\${shortdate}_log.txt'' NLog.Layouts
+2022-05-09 17:32:33.0542 Trace   Scanning SimpleLayout ''C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\${shortdate}_log.txt''
+2022-05-09 17:32:33.0542 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2022-05-09 17:32:33.0542 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-05-09 17:32:33.0542 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-05-09 17:32:33.0542 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-05-09 17:32:33.0542 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2022-05-09 17:32:33.0542 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2022-05-09 17:32:33.0542 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2022-05-09 17:32:33.0542 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-05-09 17:32:33.0542 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-05-09 17:32:33.0542 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-05-09 17:32:33.0542 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2022-05-09 17:32:33.0542 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2022-05-09 17:32:33.0678 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2022-05-09 17:32:33.0678 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-05-09 17:32:33.0678 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-05-09 17:32:33.0678 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-05-09 17:32:33.0678 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2022-05-09 17:32:33.0678 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2022-05-09 17:32:33.0678 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2022-05-09 17:32:33.0678 Info Validating config: TargetNames=logfile, ConfigItems=14, FilePath=C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency/Logger/nlog.config
+2022-05-09 17:32:33.0678 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2022-05-09 17:32:33.0859 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2022-05-09 17:32:33.0859 Trace Initializing Layout Renderer: ${message}
+2022-05-09 17:32:33.0859 Trace Initializing Layout Renderer: ${literal}
+2022-05-09 17:32:33.0859 Trace Initializing Layout Renderer: ${level}
+2022-05-09 17:32:33.0859 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2022-05-09 17:32:33.0859 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 17:32:33.0859 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2022-05-09 17:32:33.0859 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2022-05-09 17:32:33.0859 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-05-09 17:32:33.1000 Trace Initializing Layout Renderer: ${uppercase}
+2022-05-09 17:32:33.1000 Trace Initializing Layout Renderer: ${literal}
+2022-05-09 17:32:33.1000 Trace Initializing Layout Renderer: ${longdate}
+2022-05-09 17:32:33.1000 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2022-05-09 17:32:33.1000 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 17:32:33.1000 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2022-05-09 17:32:33.1000 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2022-05-09 17:32:33.1000 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-05-09 17:32:33.1000 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-05-09 17:32:33.1000 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-05-09 17:32:33.1000 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2022-05-09 17:32:33.1000 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2022-05-09 17:32:33.1000 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2022-05-09 17:32:33.1000 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-05-09 17:32:33.1000 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-05-09 17:32:33.1000 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-05-09 17:32:33.1000 Trace Initializing Layout Renderer: ${literal}
+2022-05-09 17:32:33.1000 Trace Initializing Layout Renderer: ${shortdate}
+2022-05-09 17:32:33.1000 Trace Initializing Layout Renderer: ${literal}
+2022-05-09 17:32:33.1146 Trace Initializing 'C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\${shortdate}_log.txt'
+2022-05-09 17:32:33.1146 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 17:32:33.1146 Trace Scanning SimpleLayout ''C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\${shortdate}_log.txt''
+2022-05-09 17:32:33.1146 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2022-05-09 17:32:33.1146 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-05-09 17:32:33.1146 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-05-09 17:32:33.1146 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-05-09 17:32:33.1146 Trace Initializing File Target[logfile]
+2022-05-09 17:32:33.1146 Trace FindReachableObject<NLog.Layouts.Layout>:
+2022-05-09 17:32:33.1146 Trace Scanning FileTarget 'File Target[logfile]'
+2022-05-09 17:32:33.1146 Trace  Scanning Property FileName ''C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\${shortdate}_log.txt'' NLog.Layouts
+2022-05-09 17:32:33.1146 Trace  Scanning SimpleLayout ''C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\${shortdate}_log.txt''
+2022-05-09 17:32:33.1146 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2022-05-09 17:32:33.1146 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2022-05-09 17:32:33.1146 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2022-05-09 17:32:33.1146 Trace File Target[logfile] has 2 layouts
+2022-05-09 17:32:33.1146 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory
+2022-05-09 17:33:00.5324 Debug Targets for ExchangeCurrency.Logger.LogNLog by level:
+2022-05-09 17:33:00.5324 Debug Trace =>
+2022-05-09 17:33:00.5324 Debug Debug => logfile
+2022-05-09 17:33:00.5324 Debug Info => logfile
+2022-05-09 17:33:00.5324 Debug Warn => logfile
+2022-05-09 17:33:00.5324 Debug Error => logfile
+2022-05-09 17:33:00.5324 Debug Fatal => logfile
+2022-05-09 17:33:00.6106 Debug FileTarget(Name=logfile): Preparing for new file 'C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt'
+2022-05-09 17:33:00.6173 Debug Creating file appender: C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt
+2022-05-09 17:33:00.6173 Trace Opening C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt with allowFileSharedWriting=False
+2022-05-09 17:33:00.6314 Trace Opening C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt with allowFileSharedWriting=False
+2022-05-09 17:33:00.6314 Trace Opening C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt with allowFileSharedWriting=False
+2022-05-09 17:33:00.6314 Trace Opening C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt with allowFileSharedWriting=False
+2022-05-09 17:33:15.5946 Trace Opening C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt with allowFileSharedWriting=False
+2022-05-09 17:33:36.9142 Trace Opening C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt with allowFileSharedWriting=False
+2022-05-09 17:33:44.4069 Trace Opening C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt with allowFileSharedWriting=False
+2022-05-09 17:33:55.6959 Trace Opening C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt with allowFileSharedWriting=False
+2022-05-09 17:34:00.1363 Trace Opening C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt with allowFileSharedWriting=False
+2022-05-09 17:34:04.9436 Trace Opening C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt with allowFileSharedWriting=False
+2022-05-09 17:34:04.9436 Trace Opening C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt with allowFileSharedWriting=False
+2022-05-09 17:34:04.9436 Trace Opening C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt with allowFileSharedWriting=False
+2022-05-09 17:34:04.9436 Trace Opening C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt with allowFileSharedWriting=False
+2022-05-09 17:34:35.3184 Trace Opening C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt with allowFileSharedWriting=False
+2022-05-09 17:34:39.2056 Trace Opening C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt with allowFileSharedWriting=False
+2022-05-09 17:34:39.2086 Trace Opening C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt with allowFileSharedWriting=False
+2022-05-09 17:34:39.2086 Trace Opening C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt with allowFileSharedWriting=False
+2022-05-09 17:34:39.2086 Trace Opening C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt with allowFileSharedWriting=False
+2022-05-09 17:34:51.9924 Trace Opening C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt with allowFileSharedWriting=False
+2022-05-09 17:38:34.7766 Info AppDomain Shutting down. Logger closing...
+2022-05-09 17:38:34.7766 Debug Stopping file watching for path 'C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\Logger' filter 'nlog.config'
+2022-05-09 17:38:34.7766 Trace Flushing all 1 targets...
+2022-05-09 17:38:34.7870 Trace ForEachItemInParallel() 1 items
+2022-05-09 17:38:34.7870 Trace FileTarget(Name=logfile): FlushAsync
+2022-05-09 17:38:34.7870 Trace Continuation invoked: 
+2022-05-09 17:38:34.7870 Trace Parallel task completed. 0 items remaining
+2022-05-09 17:38:34.7870 Debug Flush completed
+2022-05-09 17:38:34.7870 Trace FileTarget(Name=logfile): FlushAsync Done
+2022-05-09 17:38:34.7870 Debug Targets not configured for logger: ExchangeCurrency.Logger.LogNLog
+2022-05-09 17:38:34.7870 Debug Closing logging configuration...
+2022-05-09 17:38:34.7870 Trace Closing File Target[logfile]
+2022-05-09 17:38:34.7870 Debug Closing target 'File Target[logfile]'.
+2022-05-09 17:38:34.8053 Trace FileTarget(Name=logfile): FinalizeFile 'C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt, isArchiving: False'
+2022-05-09 17:38:34.8053 Debug FileAppender Closing Invalidate - C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\2022-05-09_log.txt
+2022-05-09 17:38:34.8053 Debug Closed target 'File Target[logfile]'.
+2022-05-09 17:38:34.8053 Trace Closing 'C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\${shortdate}_log.txt'
+2022-05-09 17:38:34.8053 Trace Closing Layout Renderer: ${literal}
+2022-05-09 17:38:34.8053 Trace Closing Layout Renderer: ${shortdate}
+2022-05-09 17:38:34.8053 Trace Closing Layout Renderer: ${literal}
+2022-05-09 17:38:34.8053 Trace Closing '${longdate} ${level:uppercase=true} ${message}'
+2022-05-09 17:38:34.8053 Trace Closing Layout Renderer: ${longdate}
+2022-05-09 17:38:34.8053 Trace Closing Layout Renderer: ${literal}
+2022-05-09 17:38:34.8053 Trace Closing Layout Renderer: ${uppercase}
+2022-05-09 17:38:34.8053 Trace Closing SimpleLayout=Layout Renderer: ${level}
+2022-05-09 17:38:34.8198 Trace Closing Layout Renderer: ${level}
+2022-05-09 17:38:34.8198 Trace Closing Layout Renderer: ${literal}
+2022-05-09 17:38:34.8198 Trace Closing Layout Renderer: ${message}
+2022-05-09 17:38:34.8198 Debug Finished closing logging configuration.
+2022-05-09 17:38:34.8198 Info Logger has been shut down.
+2022-05-09 17:54:27.7648 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2022-05-09 17:54:27.9786 Debug Found assembly location directory: 'C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\bin\Debug\net5.0' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2022-05-09 17:54:28.0494 Debug Auto loading based on NLog-Assembly found location: C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\bin\Debug\net5.0
+2022-05-09 17:54:28.0494 Debug Search for auto loading files in location: C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\bin\Debug\net5.0
+2022-05-09 17:54:28.0588 Debug Found assembly location directory: 'C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\bin\Debug\net5.0' (ExchangeCurrency, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)
+2022-05-09 17:54:28.0588 Debug Auto loading based on GetEntryAssembly-Assembly found location: C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\bin\Debug\net5.0
+2022-05-09 17:54:28.0588 Debug Auto loading based on AppDomain-BaseDirectory found location: C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\bin\Debug\net5.0
+2022-05-09 17:54:28.0588 Debug Start auto loading, location: C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\bin\Debug\net5.0
+2022-05-09 17:54:28.0588 Trace Assembly 'Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2022-05-09 17:54:28.0678 Trace Assembly 'Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' will be hidden in callsite stacktrace
+2022-05-09 17:54:28.0678 Debug Auto loading done
+2022-05-09 17:54:28.0678 Info Message Template Auto Format enabled
+2022-05-09 17:54:28.0678 Info Loading assembly: NLog.Extended
+2022-05-09 17:54:28.0678 Trace Try find 'NLog.Extended' in current domain
+2022-05-09 17:54:28.0678 Trace Haven't found' 'NLog.Extended' in current domain
+2022-05-09 17:54:28.0678 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Extended
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Extended, Culture=neutral, PublicKeyToken=null'. The system cannot find the file specified.
+File name: 'NLog.Extended, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(ObjectHandleOnStack assemblyName, ObjectHandleOnStack requestingAssembly, StackCrawlMarkHandle stackMark, Boolean throwOnFileNotFound, ObjectHandleOnStack assemblyLoadContext, ObjectHandleOnStack retAssembly)
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, RuntimeAssembly requestingAssembly, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Internal.AssemblyHelpers.LoadFromName(String assemblyName)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssembly(String assemblyName, String prefix)
+   --- End of inner exception stack trace ---
+2022-05-09 17:54:29.1062 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 17:54:29.1062 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-05-09 17:54:29.1149 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2022-05-09 17:54:29.1149 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2022-05-09 17:54:29.1149 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 17:54:29.1149 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-05-09 17:54:29.1149 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 17:54:29.1149 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-05-09 17:54:29.1149 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2022-05-09 17:54:29.1149 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2022-05-09 17:54:29.1149 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2022-05-09 17:54:29.1149 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-05-09 17:54:29.1149 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 17:54:29.1296 Trace Scanning LoggerNameLayoutRenderer 'Layout Renderer: ${logger}'
+2022-05-09 17:54:29.1296 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 17:54:29.1296 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-05-09 17:54:29.1296 Debug Setting 'NLog.Targets.FileTarget.name' to 'logfile'
+2022-05-09 17:54:29.1296 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\${shortdate}_log.txt'
+2022-05-09 17:54:29.1296 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 17:54:29.1296 Trace Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-05-09 17:54:29.1296 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${level:uppercase=true} ${message}'
+2022-05-09 17:54:29.1457 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 17:54:29.1457 Trace Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-05-09 17:54:29.1457 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2022-05-09 17:54:29.1457 Trace Wrapping NLog.LayoutRenderers.LevelLayoutRenderer with NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper
+2022-05-09 17:54:29.1457 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 17:54:29.1457 Trace Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-05-09 17:54:29.1457 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 17:54:29.1457 Trace Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-05-09 17:54:29.1457 Trace  Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2022-05-09 17:54:29.1457 Trace  Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2022-05-09 17:54:29.1457 Trace   Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2022-05-09 17:54:29.1457 Trace   Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-05-09 17:54:29.1457 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 17:54:29.1457 Trace Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-05-09 17:54:29.1457 Info Adding target FileTarget(Name=logfile)
+2022-05-09 17:54:29.1457 Debug Registered target logfile: NLog.Targets.FileTarget
+2022-05-09 17:54:29.1457 Trace ParseRulesElement
+2022-05-09 17:54:29.1869 Debug Watching path 'C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\Logger' filter 'nlog.config' for changes.
+2022-05-09 17:54:29.1869 Debug --- NLog configuration dump ---
+2022-05-09 17:54:29.1869 Debug Targets:
+2022-05-09 17:54:29.1869 Debug File Target[logfile]
+2022-05-09 17:54:29.1869 Debug Rules:
+2022-05-09 17:54:29.1934 Debug logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]
+2022-05-09 17:54:29.1934 Debug --- End of NLog configuration dump ---
+2022-05-09 17:54:29.1934 Trace FindReachableObject<System.Object>:
+2022-05-09 17:54:29.1934 Trace Scanning LoggingRule 'logNamePattern: (:All) levels: [ Debug Info Warn Error Fatal ] appendTo: [ logfile ]'
+2022-05-09 17:54:29.1934 Trace  Scanning Property Targets 'System.Collections.Generic.List`1[NLog.Targets.Target]' System.Collections.Generic
+2022-05-09 17:54:29.1934 Trace  Scanning FileTarget 'File Target[logfile]'
+2022-05-09 17:54:29.1934 Trace   Scanning Property FileName ''C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\${shortdate}_log.txt'' NLog.Layouts
+2022-05-09 17:54:29.1934 Trace   Scanning SimpleLayout ''C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\${shortdate}_log.txt''
+2022-05-09 17:54:29.1934 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2022-05-09 17:54:29.1934 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-05-09 17:54:29.1934 Trace    Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-05-09 17:54:29.1934 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-05-09 17:54:29.1934 Trace   Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2022-05-09 17:54:29.1934 Trace   Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2022-05-09 17:54:29.2088 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2022-05-09 17:54:29.2088 Trace    Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-05-09 17:54:29.2088 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-05-09 17:54:29.2088 Trace    Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-05-09 17:54:29.2088 Trace     Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2022-05-09 17:54:29.2088 Trace     Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2022-05-09 17:54:29.2088 Trace      Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2022-05-09 17:54:29.2088 Trace      Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-05-09 17:54:29.2088 Trace    Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-05-09 17:54:29.2088 Trace    Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-05-09 17:54:29.2088 Trace   Scanning Property LineEnding 'Default' NLog.Targets
+2022-05-09 17:54:29.2088 Trace  Scanning Property ChildRules 'System.Collections.Generic.List`1[NLog.Config.LoggingRule]' System.Collections.Generic
+2022-05-09 17:54:29.2088 Trace  Scanning Property Filters 'System.Collections.Generic.List`1[NLog.Filters.Filter]' System.Collections.Generic
+2022-05-09 17:54:29.2088 Info Validating config: TargetNames=logfile, ConfigItems=14, FilePath=C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency/Logger/nlog.config
+2022-05-09 17:54:29.2088 Debug Unused target checking is started... Rule Count: 1, Target Count: 1
+2022-05-09 17:54:29.2296 Debug Unused target checking is completed. Total Rule Count: 1, Total Target Count: 1, Unused Target Count: 0
+2022-05-09 17:54:29.2296 Trace Initializing Layout Renderer: ${message}
+2022-05-09 17:54:29.2296 Trace Initializing Layout Renderer: ${literal}
+2022-05-09 17:54:29.2296 Trace Initializing Layout Renderer: ${level}
+2022-05-09 17:54:29.2296 Trace Initializing SimpleLayout=Layout Renderer: ${level}
+2022-05-09 17:54:29.2296 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 17:54:29.2296 Trace Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2022-05-09 17:54:29.2296 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2022-05-09 17:54:29.2296 Trace  Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-05-09 17:54:29.2417 Trace Initializing Layout Renderer: ${uppercase}
+2022-05-09 17:54:29.2417 Trace Initializing Layout Renderer: ${literal}
+2022-05-09 17:54:29.2417 Trace Initializing Layout Renderer: ${longdate}
+2022-05-09 17:54:29.2417 Trace Initializing '${longdate} ${level:uppercase=true} ${message}'
+2022-05-09 17:54:29.2417 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 17:54:29.2417 Trace Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2022-05-09 17:54:29.2417 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2022-05-09 17:54:29.2417 Trace  Scanning LongDateLayoutRenderer 'Layout Renderer: ${longdate}'
+2022-05-09 17:54:29.2417 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-05-09 17:54:29.2417 Trace  Scanning UppercaseLayoutRendererWrapper 'Layout Renderer: ${uppercase}'
+2022-05-09 17:54:29.2417 Trace   Scanning Property Inner 'SimpleLayout=Layout Renderer: ${level}' NLog.Layouts
+2022-05-09 17:54:29.2417 Trace   Scanning SimpleLayout 'SimpleLayout=Layout Renderer: ${level}'
+2022-05-09 17:54:29.2417 Trace    Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2022-05-09 17:54:29.2417 Trace    Scanning LevelLayoutRenderer 'Layout Renderer: ${level}'
+2022-05-09 17:54:29.2417 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-05-09 17:54:29.2417 Trace  Scanning MessageLayoutRenderer 'Layout Renderer: ${message}'
+2022-05-09 17:54:29.2417 Trace Initializing Layout Renderer: ${literal}
+2022-05-09 17:54:29.2417 Trace Initializing Layout Renderer: ${shortdate}
+2022-05-09 17:54:29.2417 Trace Initializing Layout Renderer: ${literal}
+2022-05-09 17:54:29.2417 Trace Initializing 'C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\${shortdate}_log.txt'
+2022-05-09 17:54:29.2417 Trace FindReachableObject<NLog.Internal.IRenderable>:
+2022-05-09 17:54:29.2417 Trace Scanning SimpleLayout ''C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\${shortdate}_log.txt''
+2022-05-09 17:54:29.2417 Trace  Scanning Property Renderers 'System.Collections.ObjectModel.ReadOnlyCollection`1[NLog.LayoutRenderers.LayoutRenderer]' System.Collections.ObjectModel
+2022-05-09 17:54:29.2417 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-05-09 17:54:29.2554 Trace  Scanning ShortDateLayoutRenderer 'Layout Renderer: ${shortdate}'
+2022-05-09 17:54:29.2554 Trace  Scanning LiteralLayoutRenderer 'Layout Renderer: ${literal}'
+2022-05-09 17:54:29.2554 Trace Initializing File Target[logfile]
+2022-05-09 17:54:29.2554 Trace FindReachableObject<NLog.Layouts.Layout>:
+2022-05-09 17:54:29.2554 Trace Scanning FileTarget 'File Target[logfile]'
+2022-05-09 17:54:29.2554 Trace  Scanning Property FileName ''C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\${shortdate}_log.txt'' NLog.Layouts
+2022-05-09 17:54:29.2554 Trace  Scanning SimpleLayout ''C:\Users\Arus\Documents\GitHub\SocialNetwork\ExchangeCurrency\ExchangeCurrency\${shortdate}_log.txt''
+2022-05-09 17:54:29.2554 Trace  Scanning Property Layout ''${longdate} ${level:uppercase=true} ${message}'' NLog.Layouts
+2022-05-09 17:54:29.2554 Trace  Scanning SimpleLayout ''${longdate} ${level:uppercase=true} ${message}''
+2022-05-09 17:54:29.2554 Trace  Scanning Property LineEnding 'Default' NLog.Targets
+2022-05-09 17:54:29.2554 Trace File Target[logfile] has 2 layouts
+2022-05-09 17:54:29.2554 Trace FileTarget(Name=logfile): Using appenderFactory: NLog.Internal.FileAppenders.RetryingMultiProcessFileAppender+Factory

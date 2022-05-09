@@ -26,11 +26,11 @@ namespace ExchangeCurrency.BusinessLogic
             _dbContext = dbContext;
         }
 
-        public TransactionDto GetTransactionById(int id)
+        public async Task<TransactionDto> GetTransactionById(int id)
         {
-            var user = _dbContext.Transactions.Find(id);
-            var transactionView = _mapper.Map<TransactionDto>(user);
-            return transactionView;
+            var transaction = await _dbContext.Transactions.FindAsync(id);
+            var transactionDto = _mapper.Map<TransactionDto>(transaction);
+            return transactionDto;
         }
 
         public async Task<List<TransactionDto>> GetTransactionList()
@@ -45,17 +45,17 @@ namespace ExchangeCurrency.BusinessLogic
             return listTransactionDto;
         }
 
-        public string Create(TransactionDto _transactionInformation)
+        public async Task Create(TransactionDto _transactionInformation)
         {
             var transactionInformation = new Transaction();
             try
             {
-                var currencyExchangeRates = _dbContext.CurrencyExchangeRates.ToList();
+                var currencyExchangeRates = await _dbContext.CurrencyExchangeRates.ToListAsync();
                 var currencyCode = _dbContext.Currency_Symbol.Single(c => c.Code == _transactionInformation.CurrencyType);
                 var type = _transactionInformation.CurrencyType.ToString();
                 var cuurrencyValue = Convert.ToUInt32(GetPropValue(currencyExchangeRates.Last(), _transactionInformation.CurrencyType));
 
-                transactionInformation.QuantityReceived = _transactionInformation.AmountPurchased / cuurrencyValue;
+                transactionInformation.QuantityReceived = _transactionInformation.AmountPurchased * cuurrencyValue;
                 transactionInformation.CurrencyExchangeRate = currencyExchangeRates.Last();
                 transactionInformation.DateExecution = DateTime.UtcNow;
                 transactionInformation.TransactionStatus = "successful";
@@ -65,44 +65,50 @@ namespace ExchangeCurrency.BusinessLogic
                 transactionInformation.CurrencyType = currencyCode.Code;
                 _dbContext.Transactions.Add(transactionInformation);
                 _dbContext.SaveChanges();
-                return transactionInformation.TransactionStatus;
             }
             catch (Exception)
             {
                 transactionInformation.TransactionStatus = "failed";
                 _dbContext.SaveChanges();
-                return transactionInformation.TransactionStatus;
+                throw;
             }
         }
 
-        public string Update(Transaction transaction, int id)
+        public async Task Update(TransactionDto transaction)
         {
+            var transactionInformation = new Transaction();
             try
             {
-                _dbContext.Transactions.Attach(transaction);
+                var currencyExchangeRates = await _dbContext.CurrencyExchangeRates.ToListAsync();
+                var currencyCode = _dbContext.Currency_Symbol.Single(c => c.Code == transaction.CurrencyType);
+                var type = transaction.CurrencyType.ToString();
+                var cuurrencyValue = Convert.ToUInt32(GetPropValue(currencyExchangeRates.Last(), transaction.CurrencyType));
+
+                transactionInformation.QuantityReceived = transaction.AmountPurchased * cuurrencyValue;
+                transactionInformation.CurrencyExchangeRate = currencyExchangeRates.Last();
+                transactionInformation.DateExecution = DateTime.UtcNow;
+                transactionInformation.TransactionStatus = "successful";
+                transactionInformation.AmountPurchased = transaction.AmountPurchased;
+                transactionInformation.CurrencyCode = currencyCode.Id;
+                transactionInformation.CurrencyExchangeRateId = currencyExchangeRates.Last().Id;
+                transactionInformation.CurrencyType = currencyCode.Code;
+                _dbContext.Transactions.Attach(transactionInformation);
                 _dbContext.Entry(transaction).State = EntityState.Modified;
-                _dbContext.SaveChanges();
-                return "successful";
+                await _dbContext.SaveChangesAsync();
             }
             catch (Exception)
             {
-                return "failed";
+                transactionInformation.TransactionStatus = "failed";
+                _dbContext.SaveChanges();
+                throw;
             }
         }
 
-        public string Delete(int id)
+        public async Task Delete(int id)
         {
-            try
-            {
-                var transactionToDelete = _dbContext.Transactions.Single(m => m.Id == id);
-                _dbContext.Transactions.Remove(transactionToDelete);
-                _dbContext.SaveChanges();
-                return "successful";
-            }
-            catch (Exception)
-            {
-                return "failed";
-            }
+            var transactionToDelete = await _dbContext.Transactions.SingleAsync(m => m.Id == id);
+            _dbContext.Transactions.Remove(transactionToDelete);
+            _dbContext.SaveChanges();
         }
 
         public async Task<CurrencyExchangeRateDto> GetLatestExchangeRate()
@@ -111,19 +117,11 @@ namespace ExchangeCurrency.BusinessLogic
             return _mapper.Map<CurrencyExchangeRateDto>(latest);
         }
 
-        public string AddLatestExchangeRate(CurrencyExchangeRateDto rateDto)
+        public async Task AddLatestExchangeRate(CurrencyExchangeRateDto rateDto)
         {
-            try
-            {
-                var rate = _mapper.Map<CurrencyExchangeRate>(rateDto);
-                _dbContext.CurrencyExchangeRates.Add(rate);
-                _dbContext.SaveChangesAsync();
-                return "successful";
-            }
-            catch (Exception)
-            {
-                return "failed";
-            }
+            var rate = _mapper.Map<CurrencyExchangeRate>(rateDto);
+            _dbContext.CurrencyExchangeRates.Add(rate);
+            await _dbContext.SaveChangesAsync();
         }
     }
 }
